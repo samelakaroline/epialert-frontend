@@ -1,0 +1,14 @@
+.login-container {
+  text-align: center;
+}
+
+.logo {
+  width: 80px;
+}
+
+.login-container h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+  font-family: "Rasa", serif;
+  font-weight: bold;
+}
