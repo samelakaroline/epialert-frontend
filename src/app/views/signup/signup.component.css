@@ -4,9 +4,28 @@ section {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
+  background-color: var(--background-color);
 }
 
 section img {
   justify-content: center;
   align-items: center;
+}
+
+app-signupform {
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.go-back {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--button-color);
+}
+.go-back p a {
+  color: var(--button-color);
+  text-decoration: none;
 }

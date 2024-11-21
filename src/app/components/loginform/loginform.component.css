@@ -46,7 +46,7 @@
   padding: 10px;
   font-size: 16px;
   color: var(--white-color);
-  background: linear-gradient(90deg, #3a78e6, #4a90e2);
+  background-color: var(--button-color);
   border: none;
   border-radius: 25px;
   cursor: pointer;
