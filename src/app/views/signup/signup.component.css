@@ -25,6 +25,7 @@ app-signupform {
   gap: 1rem;
   color: var(--button-color);
 }
+
 .go-back p a {
   color: var(--button-color);
   text-decoration: none;

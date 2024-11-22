@@ -1,22 +1,22 @@
 <nav class="sidebar">
   <ul>
     <li>
-      <img src="../../assets/images/logo.png" alt="Logo" class="logo" />
+      <a routerLink="/"><img src="../../assets/images/logo.png" alt="Logo" class="logo" /></a>
     </li>
     <li>
-      <a routerLink="/"><i class="fa-solid fa-house"></i></a>
+      <a routerLink="/home"><fa-icon [icon]="faHouse"></fa-icon></a>
     </li>
     <li>
-      <a routerLink="/"><i class="fas fa-th"></i></a>
+      <a routerLink="/dashboard"><fa-icon [icon]="faTh"></fa-icon></a>
     </li>
     <li>
-      <a routerLink="/"><i class="fa-solid fa-user-group"></i></a>
+      <a routerLink="/group"><fa-icon [icon]="faUserGroup"></fa-icon></a>
     </li>
     <li>
-      <a routerLink="/"><i class="fa-regular fa-calendar-check"></i></a>
+      <a routerLink="/geomonitor"><fa-icon [icon]="faMapLocationDot"></fa-icon></a>
     </li>
     <li>
-      <a routerLink="/"><i class="fa-solid fa-gear"></i></a>
+      <a routerLink="/settings"><fa-icon [icon]="faGear"></fa-icon></a>
     </li>
   </ul>
 </nav>

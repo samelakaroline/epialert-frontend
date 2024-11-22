@@ -1,0 +1,12 @@
+section {
+  display: flex;
+  gap: 2rem;
+  padding: 30px;
+}
+
+.geomonitor {
+  background-color: var(--white-color);
+  border-radius: 25px;
+  padding: 20px;
+  width: 100%;
+}
