@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-signupform',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './signupform.component.html',
-  styleUrl: './signupform.component.css'
+  styleUrl: './signupform.component.css',
 })
-export class SignupformComponent {
-
-}
+export class SignupformComponent {}

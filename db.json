@@ -2,8 +2,8 @@
   "users": [
     {
       "id": 1,
-      "name": "Duck UI",
-      "email": "duckui@demo.com",
+      "name": "Fulano de Tal",
+      "email": "fulanodetal@email.com",
       "avatar": "https://i.pravatar.cc/150?img=1"
     }
   ]
