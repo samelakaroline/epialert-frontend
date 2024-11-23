@@ -12,7 +12,21 @@
         <p class="username">{{ user?.name }}</p>
         <p class="user-email">{{ user?.email }}</p>
       </div>
-      <fa-icon [icon]="faAngleDown"></fa-icon>
+      <div class="more-info">
+        <fa-icon [icon]="faAngleDown" (click)="toggleMenu()" *ngIf="!menuOpen"></fa-icon>
+      </div>
     </div>
+  </div>
+
+  <!-- MOBILE NAV MODAL -->
+  <div class="modal" [class.open]="menuOpen" *ngIf="menuOpen">
+    <div id="closeModal" (click)="toggleMenu()">
+      <img src="../../assets/images/close.png" alt="close button" />
+    </div>
+    <ul>
+      <li><a routerLink="#">Início</a></li>
+      <li><a routerLink="#">Contatos</a></li>
+      <li><a routerLink="/">Sair</a></li>
+    </ul>
   </div>
 </div>
