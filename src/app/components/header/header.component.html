@@ -3,16 +3,16 @@
 
   <div class="user-info">
     <div class="icons">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <i class="fa-regular fa-bell"></i>
+      <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+      <fa-icon [icon]="faBell"></fa-icon>
     </div>
     <div class="user-details">
-      <img class="avatar" [src]="user.avatar" alt="User Avatar" />
+      <img class="avatar" [src]="user?.avatar" alt="User Avatar" />
       <div>
-        <p class="username">{{ user.name }}</p>
-        <p class="user-email">{{ user.email }}</p>
+        <p class="username">{{ user?.name }}</p>
+        <p class="user-email">{{ user?.email }}</p>
       </div>
-      <i class="fa-solid fa-angle-down"></i>
+      <fa-icon [icon]="faAngleDown"></fa-icon>
     </div>
   </div>
 </div>

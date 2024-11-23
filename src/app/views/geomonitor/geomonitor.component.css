@@ -10,3 +10,14 @@ section {
   padding: 20px;
   width: 100%;
 }
+
+.image {
+  padding: 20px;
+  border-radius: 25px;
+  background-color: var(--background-color);
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+}

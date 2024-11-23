@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Duck UI",
+      "email": "duckui@demo.com",
+      "avatar": "https://i.pravatar.cc/150?img=1"
+    }
+  ]
+}

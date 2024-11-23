@@ -47,18 +47,18 @@
   margin-right: 15px;
 }
 
-.icons i {
-  padding: 10px;
+.icons fa-icon {
+  padding: 10px 15px;
   border-radius: 5px;
   background-color: var(--border-color);
 }
 
-.icons i:hover {
+.icons fa-icon:hover {
   color: var(--border-color);
   background-color: var(--placeholder-color);
 }
 
-.user-details i {
+.user-details fa-icon {
   color: var(--placeholder-color);
   cursor: pointer;
   margin-left: 10px;
