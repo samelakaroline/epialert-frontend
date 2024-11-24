@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router'; // Importar o Router
+import { Router, RouterModule } from '@angular/router'; // Importar o Router
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { AppLogoComponent } from '../applogo/applogo.component';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../services/auth.service';
+import { LoginCredentials } from '../../interfaces/loginCredentials-interface';
 
 @Component({
   selector: 'app-loginform',
@@ -14,7 +14,7 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./loginform.component.css'],
 })
 export class LoginFormComponent {
-  credentials = {
+  credentials: LoginCredentials = {
     username_or_email: '',
     password: '',
   };
@@ -22,27 +22,28 @@ export class LoginFormComponent {
   errorMessage: string = '';
   isLoading: boolean = false;
 
-  constructor(private authService: AuthService, private router: Router) {} // Injete o Router aqui
+  constructor(private authService: AuthService, private router: Router) {}
 
-  /**
-   * Realiza o login do usuário.
-   */
+  // Realiza o login do usuário
   onLogin(): void {
     this.isLoading = true;
     this.authService.login(this.credentials).subscribe({
       next: (response) => {
         this.isLoading = false;
-        if (response.token) {
-          this.authService.setToken(response.token); // Salva o token no localStorage
+        if (response) {
+          // Armazena o token e os dados do usuário no localStorage
+          this.authService.storeUserData(response.token, response.user);
           console.log('Login bem-sucedido!', response);
-          this.router.navigate(['/home']); // Redireciona para a tela Home
+          // Redireciona para a tela de início
+          this.router.navigate(['/home']);
         } else {
           this.errorMessage = 'Login falhou. Token não recebido.';
         }
       },
       error: (error) => {
         this.isLoading = false;
-        this.errorMessage = error.error?.error || 'Erro ao fazer login. Tente novamente.';
+        this.errorMessage =
+          error.error?.error || 'Erro ao fazer login. Tente novamente.';
         console.error('Erro ao logar:', error);
       },
     });

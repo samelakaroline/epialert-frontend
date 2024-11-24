@@ -1,71 +1,52 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-export interface LoginCredentials {
-  username_or_email: string; // Altera para refletir o campo esperado no backend
-  password: string;
-}
-
-export interface RegisterCredentials {
-  username: string;
-  email: string;
-  password: string;
-}
+import { LoginCredentials } from '../interfaces/loginCredentials-interface';
+import { RegisterCredentials } from '../interfaces/registerCredentials-interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'http://127.0.0.1:8000/users'; // URL base do backend
+  // URL base do backend
+  private apiUrl = 'http://127.0.0.1:8000/users';
 
   constructor(private http: HttpClient) {}
 
-  /**
-   * Envia credenciais de login ao backend.
-   * @param credentials Credenciais no formato esperado pelo backend.
-   * @returns Observable com a resposta do backend.
-   */
+  // Método para fazer login
   login(credentials: LoginCredentials): Observable<any> {
-    return this.http.post(`${this.apiUrl}/login/`, credentials); // POST para /users/login/
+    return this.http.post(`${this.apiUrl}/login/`, credentials);
   }
 
-  /**
-   * Registra um novo usuário no backend.
-   * @param credentials Credenciais para registro (username, email e password).
-   * @returns Observable com a resposta do backend.
-   */
+  // Método para fazer criar um novo usuário
   register(credentials: RegisterCredentials): Observable<any> {
-    return this.http.post(`${this.apiUrl}/register/`, credentials); // POST para /users/register/
+    return this.http.post(`${this.apiUrl}/register/`, credentials);
   }
 
-  /**
-   * Armazena o token JWT no localStorage.
-   * @param token Token JWT recebido no login.
-   */
-  setToken(token: string): void {
+  // Método para adicionar o token e os dados do usuário ao localStorage
+  storeUserData(token: string, user: any): void {
     localStorage.setItem('token', token);
+    localStorage.setItem('user', JSON.stringify(user));
   }
 
-  /**
-   * Recupera o token JWT armazenado no localStorage.
-   * @returns O token JWT ou null se não existir.
-   */
+  // Método para retornar o token JWT armazenado
   getToken(): string | null {
     return localStorage.getItem('token');
   }
 
-  /**
-   * Remove o token JWT armazenado.
-   */
-  clearToken(): void {
-    localStorage.removeItem('token');
+  // Método para retornar os dados do usuário armazenados
+  getUser(): any | null {
+    const user = localStorage.getItem('user');
+    return user ? JSON.parse(user) : null;
   }
 
-  /**
-   * Verifica se o usuário está autenticado com base na presença do token.
-   * @returns True se o token existir, false caso contrário.
-   */
+  // Método para remover o token e os dados do usuário do localStorage
+  clearUserData(): void {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+  }
+
+  // Método para verificar se o usuário está autenticado
   isAuthenticated(): boolean {
     return !!this.getToken();
   }

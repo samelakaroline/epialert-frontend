@@ -1,5 +1,5 @@
 {
-  "name": "epyalert-frontend",
+  "name": "epialert-frontend",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:epyalert-frontend": "node dist/epyalert-frontend/server/server.mjs"
+    "serve:ssr:epialert-frontend": "node dist/epialert-frontend/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -26,9 +26,7 @@
     "@fortawesome/angular-fontawesome": "^0.11.0",
     "@fortawesome/free-solid-svg-icons": "^6.7.1",
     "@ngneat/overview": "^6.0.0",
-    "@ngxpert/hot-toast": "^3.0.1",
     "express": "^4.18.2",
-    "json-server": "^1.0.0-beta.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"

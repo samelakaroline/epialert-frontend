@@ -7,10 +7,10 @@
       <fa-icon [icon]="faBell"></fa-icon>
     </div>
     <div class="user-details">
-      <img class="avatar" [src]="user?.avatar" alt="User Avatar" />
+      <img class="avatar" [src]="user.avatar" alt="User Avatar" />
       <div>
-        <p class="username">{{ user?.name }}</p>
-        <p class="user-email">{{ user?.email }}</p>
+        <p class="username">{{ user.name }}</p>
+        <p class="user-email">{{ user.email }}</p>
       </div>
       <div class="more-info">
         <fa-icon [icon]="faAngleDown" (click)="toggleMenu()" *ngIf="!menuOpen"></fa-icon>

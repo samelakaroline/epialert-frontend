@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "epyalert-frontend": {
+    "epialert-frontend": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/epyalert-frontend",
+            "outputPath": "dist/epialert-frontend",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -31,8 +31,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",
-              "src/styles.css",
-              "node_modules/@ngxpert/hot-toast/src/styles/styles.css"
+              "src/styles.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -69,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "epyalert-frontend:build:production"
+              "buildTarget": "epialert-frontend:build:production"
             },
             "development": {
-              "buildTarget": "epyalert-frontend:build:development"
+              "buildTarget": "epialert-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"

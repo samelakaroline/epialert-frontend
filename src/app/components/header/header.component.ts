@@ -1,6 +1,5 @@
 import { Component, inject, Input } from '@angular/core';
 import { UserInterface } from '../../interfaces/user-interface';
-import { DataService } from '../../services/data-service.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faMagnifyingGlass,
@@ -23,17 +22,17 @@ export class HeaderComponent {
   faAngleDown = faAngleDown;
 
   @Input() pageTitle: string = '';
-  user: UserInterface | undefined;
-  userService: DataService = inject(DataService);
+  user: UserInterface = {
+    id: 1,
+    name: 'Fulano de Tal',
+    email: 'fulanodetal@email.com',
+    avatar: 'https://i.pravatar.cc/150?img=1',
+  };
 
   menuOpen = false;
-  // Método para alternar o estado do menu hambúrguer
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
 
-  constructor() {
-    // Retorna um usuário específico
-    this.userService.getUser(1).then((user) => (this.user = user));
-  }
+  constructor() {}
 }

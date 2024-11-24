@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -20,9 +20,13 @@ export class SignupFormComponent {
   errorMessage: string = '';
   isLoading: boolean = false;
 
+  constructor(private router: Router) {}
+
+  // Realiza o cadastro do usuário
   onSignup(): void {
     this.isLoading = true;
     console.log('Cadastrando usuário:', this.credentials);
+    this.router.navigate(['/']); // Redireciona para a tela de login
     setTimeout(() => {
       this.isLoading = false;
       if (this.credentials.username === 'erro') {
@@ -31,6 +35,6 @@ export class SignupFormComponent {
         this.errorMessage = '';
         console.log('Cadastro bem-sucedido!');
       }
-    }, 2000); // Simulação de requisição
+    }, 2000);
   }
 }
