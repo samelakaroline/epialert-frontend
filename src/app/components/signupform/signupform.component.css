@@ -67,3 +67,23 @@
   align-items: flex-end;
   width: 100%;
 }
+
+.error-message {
+  color: #dc3545;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.signup-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+form {
+  width: 100%;
+}

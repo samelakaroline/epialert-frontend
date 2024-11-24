@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { LoginformComponent } from '../../components/loginform/loginform.component';
+import { LoginFormComponent } from '../../components/loginform/loginform.component';
+import { AppLogoComponent } from '../../components/applogo/applogo.component'; // Importe o AppLogoComponent
+
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [LoginformComponent],
+  imports: [LoginFormComponent, AppLogoComponent], // Certifique-se de que LoginFormComponent é standalone
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {}

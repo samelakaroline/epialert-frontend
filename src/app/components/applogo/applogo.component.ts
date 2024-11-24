@@ -3,10 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-applogo',
   standalone: true,
-  imports: [],
-  templateUrl: './applogo.component.html',
-  styleUrl: './applogo.component.css'
+  template: `<div class="app-logo">EpyAlert</div>`,
+  styles: [`
+    .app-logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0078d4;
+    }
+  `],
 })
-export class ApplogoComponent {
-
-}
+export class AppLogoComponent {}

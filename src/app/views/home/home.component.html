@@ -1,6 +1,71 @@
+
 <section>
   <app-sidebar></app-sidebar>
   <div class="home">
     <app-header [pageTitle]="'Home'"></app-header>
+    <div class="metrics">
+      <div class="card resolved-alerts">
+        <div class="icon">✔️</div>
+        <div class="info">
+          <h3>Taxa de Alertas Resolvidos</h3>
+          <p>35</p>
+        </div>
+      </div>
+      <div class="card daily-alerts">
+        <div class="icon">⚠️</div>
+        <div class="info">
+          <h3>Alertas das últimas 24 horas</h3>
+          <p>15</p>
+        </div>
+      </div>
+      <div class="card active-alerts">
+        <div class="icon">📊</div>
+        <div class="info">
+          <h3>Número de Alertas Ativos</h3>
+          <p>50</p>
+        </div>
+      </div>
+    </div>
+    <div class="alerts-section">
+      <div class="alerts-table">
+        <h3>Lista de Alertas</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Local</th>
+              <th>Epidemia</th>
+              <th>Gravidade</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ibirapuera</td>
+              <td>Dengue</td>
+              <td class="high">Alta</td>
+              <td class="resolved">Resolvido</td>
+            </tr>
+            <tr>
+              <td>Vila Serrana</td>
+              <td>Gripe</td>
+              <td class="low">Baixa</td>
+              <td class="resolved">Resolvido</td>
+            </tr>
+            <tr>
+              <td>Patagônia</td>
+              <td>Zika Virus</td>
+              <td class="medium">Média</td>
+              <td class="active">Ativo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="alerts-chart">
+        <h3>Taxa de Alertas Resolvidos</h3>
+        <div class="chart">
+          <!-- Gráfico será renderizado aqui -->
+        </div>
+      </div>
+    </div>
   </div>
 </section>

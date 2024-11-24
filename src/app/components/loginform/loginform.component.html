@@ -1,18 +1,44 @@
 <div class="login-container">
   <app-applogo></app-applogo>
   <p>
-    Don’t have an account? <span class="sign-up" routerLink="/signup">Sign up!</span>
+    Don't have an account? <span class="sign-up" routerLink="/signup">Sign up!</span>
   </p>
-  <div class="input-group">
-    <label>Your Email</label>
-    <input type="email" placeholder="Ex: Maguire@FlexUI.com" />
+
+  <div class="error-message" *ngIf="errorMessage">
+    {{ errorMessage }}
   </div>
-  <div class="input-group">
-    <label>Password</label>
-    <input type="password" placeholder="Create a password" />
-  </div>
-  <div class="button-group">
-    <button class="login-button" routerLink="home">Login</button>
-    <a href="#" class="forgot-password" routerLink="#">Forgot password?</a>
-  </div>
+
+  <form (ngSubmit)="onLogin()">
+    <div class="input-group">
+      <label for="username_or_email">Username or Email</label>
+      <input
+        id="username_or_email"
+        type="text"
+        placeholder="Enter your username or email"
+        [(ngModel)]="credentials.username_or_email"
+        name="username_or_email"
+        required
+      />
+    </div>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        placeholder="Enter your password"
+        [(ngModel)]="credentials.password"
+        name="password"
+        required
+      />
+    </div>
+    <div class="button-group">
+      <button
+        type="submit"
+        class="login-button"
+        [disabled]="isLoading || !credentials.username_or_email || !credentials.password">
+        {{ isLoading ? 'Logging in...' : 'Login' }}
+      </button>
+      <a href="#" class="forgot-password" routerLink="#">Forgot password?</a>
+    </div>
+  </form>
 </div>

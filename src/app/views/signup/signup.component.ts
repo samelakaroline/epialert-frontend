@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { SignupformComponent } from '../../components/signupform/signupform.component';
-import { ApplogoComponent } from '../../components/applogo/applogo.component';
+import { SignupFormComponent } from '../../components/signupform/signupform.component';
+import { AppLogoComponent } from '../../components/applogo/applogo.component'; // Importe o AppLogoComponent
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [SignupformComponent, ApplogoComponent, RouterModule],
+  imports: [SignupFormComponent, AppLogoComponent, RouterModule], // Inclua o AppLogoComponent
   templateUrl: './signup.component.html',
-  styleUrl: './signup.component.css',
+  styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent {}
