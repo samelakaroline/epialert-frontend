@@ -3,7 +3,7 @@ import { LoginComponent } from './views/login/login.component';
 import { SignupComponent } from './views/signup/signup.component';
 import { HomeComponent } from './views/home/home.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { GeomonitorComponent } from './views/geomonitor/geomonitor.component';
+import { GeoMonitorComponent } from './views/geomonitor/geomonitor.component';
 import { NotFoundComponent } from './views/notfound/notfound.component';
 
 export const routes: Routes = [
@@ -32,9 +32,9 @@ export const routes: Routes = [
     title: 'EpiAlert System - Dashboard',
   },
   {
-    // Rota para a página de geomonitoramento
+    // Rota para a página de geo monitoramento
     path: 'geomonitor',
-    component: GeomonitorComponent,
+    component: GeoMonitorComponent,
     title: 'EpiAlert System - GeoMonitoramento',
   },
   {

@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { UserInterface } from '../../interfaces/user-interface';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {

@@ -8,39 +8,19 @@
   <form (ngSubmit)="onSignup()">
     <div class="input-group">
       <i class="fa-regular fa-user font-icon"></i>
-      <input
-        type="text"
-        placeholder="Username"
-        [(ngModel)]="credentials.username"
-        name="username"
-        required
-      />
+      <input type="text" placeholder="Username" [(ngModel)]="credentials.username" name="username" required />
     </div>
     <div class="input-group">
       <i class="fa-regular fa-envelope font-icon"></i>
-      <input
-        type="email"
-        placeholder="E-mail"
-        [(ngModel)]="credentials.email"
-        name="email"
-        required
-      />
+      <input type="email" placeholder="E-mail" [(ngModel)]="credentials.email" name="email" required />
     </div>
     <div class="input-group">
       <i class="fa-solid fa-lock font-icon"></i>
-      <input
-        type="password"
-        placeholder="Password (minimum 8 characters)"
-        [(ngModel)]="credentials.password"
-        name="password"
-        required
-        minlength="8"
-      />
+      <input type="password" placeholder="Password (minimum 8 characters)" [(ngModel)]="credentials.password"
+        name="password" required minlength="8" />
     </div>
     <div class="button-group">
-      <button
-        type="submit"
-        class="signup-button"
+      <button type="submit" class="signup-button"
         [disabled]="isLoading || !credentials.username || !credentials.email || !credentials.password">
         {{ isLoading ? 'Cadastrando...' : 'Cadastrar' }}
       </button>

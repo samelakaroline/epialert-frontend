@@ -9,13 +9,14 @@
 
 :root {
   --primary-color: #007acb;
-  --background-color: #c8d8e88e;
+  --background-color: #c8d8e8;
   --white-color: #ffffff;
   --text-color: #000000;
   --button-color: #2b58af;
   --border-color: #dddddd;
   --placeholder-color: #a1a1a1;
   --sidebar-color: #112449;
+  --gray-color: #f0f0f0;
 }
 
 body {

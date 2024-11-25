@@ -9,4 +9,4 @@ import { HeaderComponent } from '../../components/header/header.component';
   templateUrl: './geomonitor.component.html',
   styleUrl: './geomonitor.component.css',
 })
-export class GeomonitorComponent {}
+export class GeoMonitorComponent {}

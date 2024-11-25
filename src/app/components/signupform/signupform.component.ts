@@ -26,7 +26,8 @@ export class SignupFormComponent {
   onSignup(): void {
     this.isLoading = true;
     console.log('Cadastrando usuário:', this.credentials);
-    this.router.navigate(['/']); // Redireciona para a tela de login
+    // Redireciona para a tela de login
+    this.router.navigate(['/']);
     setTimeout(() => {
       this.isLoading = false;
       if (this.credentials.username === 'erro') {

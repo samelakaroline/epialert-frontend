@@ -1,27 +1,32 @@
-
 <section>
   <app-sidebar></app-sidebar>
   <div class="home">
     <app-header [pageTitle]="'Home'"></app-header>
     <div class="metrics">
       <div class="card resolved-alerts">
-        <div class="icon">✔️</div>
-        <div class="info">
+        <div>
           <h3>Taxa de Alertas Resolvidos</h3>
+        </div>
+        <div class="info">
+          <fa-icon class="icon" class="fa-3x" [icon]="faSquareCheck"></fa-icon>
           <p>35</p>
         </div>
       </div>
       <div class="card daily-alerts">
-        <div class="icon">⚠️</div>
-        <div class="info">
+        <div>
           <h3>Alertas das últimas 24 horas</h3>
+        </div>
+        <div class="info">
+          <fa-icon class="icon" class="fa-3x" [icon]="faTriangleExclamation"></fa-icon>
           <p>15</p>
         </div>
       </div>
       <div class="card active-alerts">
-        <div class="icon">📊</div>
-        <div class="info">
+        <div>
           <h3>Número de Alertas Ativos</h3>
+        </div>
+        <div class="info">
+          <fa-icon class="icon" class="fa-3x" [icon]="faSquarePollVertical"></fa-icon>
           <p>50</p>
         </div>
       </div>
@@ -42,28 +47,45 @@
             <tr>
               <td>Ibirapuera</td>
               <td>Dengue</td>
-              <td class="high">Alta</td>
-              <td class="resolved">Resolvido</td>
+              <td class="high"><span>Alta</span></td>
+              <td class="resolved"><span>Resolvido</span></td>
             </tr>
             <tr>
               <td>Vila Serrana</td>
               <td>Gripe</td>
-              <td class="low">Baixa</td>
-              <td class="resolved">Resolvido</td>
+              <td class="low"><span>Baixa</span></td>
+              <td class="resolved"><span>Resolvido</span></td>
             </tr>
             <tr>
               <td>Patagônia</td>
               <td>Zika Virus</td>
-              <td class="medium">Média</td>
-              <td class="active">Ativo</td>
+              <td class="medium"><span>Média</span></td>
+              <td class="active"><span>Ativo</span></td>
+            </tr>
+            <tr>
+              <td>Ibirapuera</td>
+              <td>Dengue</td>
+              <td class="high"><span>Alta</span></td>
+              <td class="resolved"><span>Resolvido</span></td>
+            </tr>
+            <tr>
+              <td>Candeias</td>
+              <td>Gripe</td>
+              <td class="high"><span>Alta</span></td>
+              <td class="resolved"><span>Resolvido</span></td>
             </tr>
           </tbody>
         </table>
       </div>
       <div class="alerts-chart">
-        <h3>Taxa de Alertas Resolvidos</h3>
+        <div>
+          <h3>Taxa de Alertas Resolvidos</h3>
+        </div>
         <div class="chart">
           <!-- Gráfico será renderizado aqui -->
+          <div>
+            <img class="grafico" src="../../assets/images/grafico.png" alt="exemplo de gráfico" />
+          </div>
         </div>
       </div>
     </div>
