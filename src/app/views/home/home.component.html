@@ -3,7 +3,7 @@
   <div class="home">
     <app-header [pageTitle]="'Home'"></app-header>
     <div class="metrics">
-      <div class="card resolved-alerts">
+      <div class="card resolved-">
         <div>
           <h3>Taxa de Alertas Resolvidos</h3>
         </div>
@@ -12,7 +12,7 @@
           <p>35</p>
         </div>
       </div>
-      <div class="card daily-alerts">
+      <div class="card daily-">
         <div>
           <h3>Alertas das últimas 24 horas</h3>
         </div>
@@ -21,7 +21,7 @@
           <p>15</p>
         </div>
       </div>
-      <div class="card active-alerts">
+      <div class="card active-">
         <div>
           <h3>Número de Alertas Ativos</h3>
         </div>
@@ -31,8 +31,8 @@
         </div>
       </div>
     </div>
-    <div class="alerts-section">
-      <div class="alerts-table">
+    <div class="-section">
+      <div class="-table">
         <h3>Lista de Alertas</h3>
         <table>
           <thead>
@@ -77,17 +77,14 @@
           </tbody>
         </table>
       </div>
-      <div class="alerts-chart">
+      <div class="-chart">
         <div>
           <h3>Taxa de Alertas Resolvidos</h3>
         </div>
         <div class="chart">
-          <!-- Gráfico será renderizado aqui -->
-          <div>
-            <img class="grafico" src="../../assets/images/grafico.png" alt="exemplo de gráfico" />
-          </div>
+          <app-alerts-chart></app-alerts-chart>
         </div>
-      </div>
+      </div>      
     </div>
   </div>
 </section>

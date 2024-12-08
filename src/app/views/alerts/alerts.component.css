@@ -1,0 +1,70 @@
+/* Estilos gerais */
+.alerts-container {
+  display: flex;
+  height: 100vh;
+  background-color: var(--gray-color);
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--white-color);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  margin-left: 180px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Lista de alertas com rolagem */
+.alerts-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Estilo dos itens de alerta */
+.alert-item {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+/* Cores para diferentes níveis de alerta */
+.alert-item.high {
+  background-color: #f8d7da; /* Vermelho claro */
+  color: #842029;
+}
+
+.alert-item.medium {
+  background-color: #fff3cd; /* Amarelo claro */
+  color: #856404;
+}
+
+.alert-item.low {
+  background-color: #d4edda; /* Verde claro */
+  color: #155724;
+}
+
+/* Rolagem estilizada */
+.alerts-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.alerts-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.alerts-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.alerts-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

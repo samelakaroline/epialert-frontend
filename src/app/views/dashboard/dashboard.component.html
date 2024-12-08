@@ -1,6 +1,22 @@
-<section>
+<div class="dashboard-container">
   <app-sidebar></app-sidebar>
-  <div class="dash">
-    <app-header [pageTitle]="'Dashboard'"></app-header>
+  <div class="content">
+    <h1>Dashboard</h1>
+
+    <label for="chartType"></label>
+    <select id="chartType" [(ngModel)]="selectedChartType">
+      <option value="line">Tendência de Alertas</option>
+      <option value="bar">Gráfico de Barras</option>
+      <option value="area">Gráfico de Área</option>
+      <option value="pie">Visualização por Proporção</option>
+      <option value="stacked-column">Gráfico de Colunas Empilhadas</option>
+    </select>
+
+    <!-- Visualizações Condicionais -->
+    <app-trend-chart *ngIf="selectedChartType === 'line'"></app-trend-chart>
+    <app-bar-chart *ngIf="selectedChartType === 'bar'"></app-bar-chart>
+    <app-area-chart *ngIf="selectedChartType === 'area'"></app-area-chart>
+    <app-pie-chart *ngIf="selectedChartType === 'pie'"></app-pie-chart>
+    <app-stacked-column-chart *ngIf="selectedChartType === 'stacked-column'"></app-stacked-column-chart>
   </div>
-</section>
+</div>

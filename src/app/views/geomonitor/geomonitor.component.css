@@ -1,23 +1,57 @@
-section {
+/* Estiliza o container principal do geomonitoramento */
+.geomonitor-container {
   display: flex;
-  gap: 2rem;
-  padding: 30px;
+  height: 100vh;
+  background-color: var(--gray-color);
 }
 
-.geomonitor {
+/* Estiliza a área de conteúdo principal */
+.content {
+  flex: 1;
+  padding: 20px;
   background-color: var(--white-color);
-  border-radius: 25px;
-  padding: 20px;
-  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  margin-left: 180px; /* Garante que o conteúdo não fique embaixo da barra lateral */
+  display: flex;
+  flex-direction: column;
 }
 
-.image {
-  padding: 20px;
-  border-radius: 25px;
-  background-color: var(--background-color);
+/* Estiliza o cabeçalho da seção de geomonitoramento */
+.content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.image img {
+/* Estiliza o contêiner do mapa */
+#map {
+  flex: 1;
   width: 100%;
-  height: 100%;
+  height: 500px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajusta o layout para garantir que a barra lateral não sobreponha o conteúdo */
+.sidebar {
+  width: 180px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .geomonitor-container {
+    flex-direction: column;
+  }
+
+  .content {
+    margin: 10px;
+    padding: 15px;
+    margin-left: 0; /* Remove o deslocamento lateral em telas menores */
+  }
+
+  #map {
+    height: 400px; /* Reduz a altura do mapa em telas menores */
+  }
 }
